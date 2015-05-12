@@ -1,0 +1,34 @@
+<h1><%= @patron.name() %></h1>
+
+<h3>Select all books that you want to check out:</h3>
+
+<% if @copies.any?() %>
+  <form action="/patrons/<%= @patron.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <% @copies.each() do |copy| %>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="copies_id[]" value="<%= copy.id() %>"><%= copy.title() %>
+          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+        </label>
+      </div>
+    <% end %>
+
+    <button type="submit">Checkout books</button>
+  </form>
+<% end %>
+
+
+<% if @patron.copies().any?() %>
+  <h3>Here are all the books you have checked out:</h3>
+
+  <ul>
+    <% @patron.copies().each() do |copy| %>
+      <li><a href="/copies/<%= copy.id() %>"><%= copy.title() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>you have not checked any books out yet!</p>
+<% end %>
+
+<a href="/">Return to Main Page</a>

@@ -1,0 +1,19 @@
+<h1>Hello Librarian</h1>
+
+<h4>Here are all of the books in the library:</h4>
+<ul class="nav nav-pills nav-stacked">
+  <% @copies.each do |copy| %>
+    <li><a href="/copies/<%= copy.id() %>"><%= copy.title() %></a></li>
+  <% end %>
+</ul>
+
+<a href="/copies/new">Click here to add a book to the library:</a>
+
+<h4>Here are all of library cardholders:</h4>
+<ul class="nav nav-pills nav-stacked">
+  <% @patrons.each do |patron| %>
+    <li><a href="/patrons/<%= patron.id() %>"><%= patron.name() %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/"></a></p>

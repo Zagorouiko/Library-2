@@ -1,0 +1,10 @@
+<h1><%=@copy.title() %> </h1>
+
+<h2>Remove book from library:</h2>
+
+
+<form action="/copies/<%= @copy.id() %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+
+  <button type="submit">Remove book</button>
+</form>

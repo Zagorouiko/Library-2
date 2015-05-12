@@ -1,0 +1,16 @@
+<h1>Hello Library Patron</h1>
+
+<h4>Click on your name if you already have a library card:</h4>
+<ul>
+  <% @patrons.each do |patron| %>
+    <li>
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+      <a href="/patrons/<%= patron.id() %>"><%= patron.name() %></a>
+    </li>
+  <% end %>
+</ul>
+<h4>Fill out the membership form if you would like a library card:</h4>
+
+<a href="/patrons/new">Membership Form</a>
+
+<p><a href="/"></a></p>

@@ -1,0 +1,42 @@
+body {
+  color: white;
+  margin-left: 0px;
+  background-image: url("../images/lib.jpg")
+}
+
+
+.button {
+  text-align: right;
+}
+
+a {
+    color: white;
+}
+
+a .hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.jumbotron {
+   background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgba(15, 15, 15, .25); 
+}
+
+.navbar-default {
+	background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgba(200, 250, 250, 0.25); 
+}
+
+.two {
+	margin-left: auto;
+}
+
+.three {
+	background: rgb(200, 54, 54); /* This is for ie8 and below */
+   background: rgba(200, 250, 250, 0.25);
+}
+
+.sidebar-wrapper {
+	background-color: black;
+}
